@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cabecalho: #061529;
+    --cor-de-fundo: #00030C;
+    --cor-dotexto: aliceblue;
+    
+}
+
+/*cabecalho---------------------------------------------------------------------------------------------------*/
+
+header {
+    background-color: var(--cabecalho);
+    width: 100%;
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+
+.caixa-menuprincipal a{
+   
+    color: var(--cor-dotexto);
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.caixa-menuprincipal a:hover {
+    background-color: var(--cor-dotexto); 
+    color: var(--cabecalho); 
+    border-radius: 15px;
+}
+
+.caixadepesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.caixadepesquisa input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #47456b; 
+    color: white;
+    outline: none;
+    display: flex;
+}
+
+/*conteudo do site---------------------------------------------------------------------------------------------------*/
+main{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+   
+
+}
+
+section.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px; 
+    
+}
+
+main h4{
+    margin: 20px;
+}
+
+main h1{
+    margin: 30px;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    
+}
+
+
+
+.card {
+    max-width: 220px; 
+    width: 300px;
+    height:300px;
+    border-radius: 15px;
+    transition: transform 0.5s ease; /* Efeito de escala ao passar o mouse */
+}
+
+.card:hover {
+    transform: scale(1.03); 
+}
+
+/*BREAKPOINTS---------------------------------------------------------------------------------------------------*/
+
+
+/*600*/
+
+
+@media screen and (max-width:600px){
+
+    .caixa-menuprincipal{
+        font-size: 50%;
+    }
+    .caixadepesquisa input {
+        width: 110px;
+        height: 15px;
+        font-size: x-small;
+    }
+  
+}
+
+
+/*1024*/
+
+@media screen and (min-width:601px) and (max-width:1024px){
+
+    .caixa-menuprincipal{
+        font-size: 100%;
+    }
+    .caixadepesquisa input {
+        width: 110px;
+        height: 15px;
+        font-size: x-small;
+    }
+
+}
+
+/*1200*/
+
+@media screen and (min-width:1025px) and (max-width:1200px){
+
+    .caixa-menuprincipal{
+        font-size: 150%;
+    }
+  
+}
+
+/*flexbox---------------------------------------------------------------------------------------------------*/
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+/*menu mobile--------------------------------------------------------------------------------------------------*/
+#menutoggle{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width:600px){
+    .header{
+        position: fixed;
+        top: 0px;
+        width: 100%
+    }
+    .header nav{
+        display: absolute;
+        width:100%;
+        height: 100%;;
+    }
+    .caixa-menuprincipal{
+        display:flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-items: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+    }
+  
+}
